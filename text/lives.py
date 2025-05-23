@@ -2,20 +2,20 @@ import pygame
 from utility import *
 
 
-class Score(pygame.sprite.Sprite):
+class Lives(pygame.sprite.Sprite):
     def __init__(self, screen):
         if hasattr(self, "containers"):
             super().__init__(self.containers)
         else:
             super().__init__()
-        
-        self.points = 0
+
+        self.lives = 3
         self.screen = screen
         self.text = pygame.font.Font(size=TEXT_SIZE)
 
-    def increment(self):
-        self.points += 1
+    def decrement(self):
+        self.lives -= 1
 
     def draw(self, screen):
-        score_text = self.text.render(f"SCORE: {self.points}", True, (0, 255, 0))
-        screen.blit(score_text, (SCORE_LOCATION_X, SCORE_LOCATION_Y))
+        lives_text = self.text.render(f"LIVES: {self.lives}", True, (255, 0, 0))
+        screen.blit(lives_text, (LIVES_LOCATION_X, LIVES_LOCATION_Y))

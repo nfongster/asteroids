@@ -18,9 +18,11 @@ def main():
     sprites.Shot.containers = (shots, updatable, drawable)
 
     text.Score.containers = (drawable)
+    text.Lives.containers = (drawable)
 
     player = sprites.Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     score = text.Score(screen)
+    lives = text.Lives(screen)
     asteroid_field = sprites.AsteroidField()
 
     while True:

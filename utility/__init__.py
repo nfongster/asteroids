@@ -3,8 +3,11 @@ from .constants import *
 __all__ = [
     "SCREEN_WIDTH",
     "SCREEN_HEIGHT",
+    "TEXT_SIZE",
     "SCORE_LOCATION_X",
     "SCORE_LOCATION_Y",
+    "LIVES_LOCATION_X",
+    "LIVES_LOCATION_Y",
     "ASTEROID_MIN_RADIUS",
     "ASTEROID_KINDS",
     "ASTEROID_SPAWN_RATE",
