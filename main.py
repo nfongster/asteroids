@@ -35,8 +35,9 @@ def main():
 
         for a in asteroids:
             if a.check_collision(player):
-                print("Game over!")
-                sys.exit()
+                if not player.respawn(lives):
+                    print("Game over!")
+                    sys.exit()
 
             for s in shots:
                 if a.check_collision(s):
