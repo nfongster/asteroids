@@ -34,10 +34,9 @@ def main():
         updatable.update(dt)
 
         for a in asteroids:
-            if a.check_collision(player):
-                if not player.respawn(lives):
-                    print("Game over!")
-                    sys.exit()
+            if a.check_collision(player) and not player.respawn(lives):
+                print("Game over!")
+                sys.exit()
 
             for s in shots:
                 if a.check_collision(s):
