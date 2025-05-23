@@ -1,6 +1,5 @@
-import pygame, random
-import sprites
-from constants import *
+import pygame, random, sprites
+from utility import *
 
 
 class Asteroid(sprites.CircleShape):

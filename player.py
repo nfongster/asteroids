@@ -1,7 +1,6 @@
-import pygame
-import sprites
+import pygame, sprites
+from utility import *
 from shot import Shot
-from constants import *
 
 class Player(sprites.CircleShape):
     def __init__(self, x, y):

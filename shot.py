@@ -1,6 +1,5 @@
-import pygame
-import sprites
-from constants import *
+import pygame, sprites
+from utility import *
 
 
 class Shot(sprites.CircleShape):

@@ -1,5 +1,5 @@
 import pygame, sys, sprites
-from constants import *
+from utility import *
 from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
