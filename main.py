@@ -42,7 +42,7 @@ def main():
                 if a.check_collision(s):
                     a.split()
                     s.kill()
-                    score.increment()
+                    score.increment(player)
 
         for d in drawable:
             d.draw(screen)

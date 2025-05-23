@@ -1,6 +1,8 @@
 from .constants import *
+from .enums import *
 
 __all__ = [
+    # Constants
     "SCREEN_WIDTH",
     "SCREEN_HEIGHT",
     "TEXT_SIZE",
@@ -18,5 +20,7 @@ __all__ = [
     "PLAYER_SPEED",
     "SHOT_RADIUS",
     "PLAYER_SHOOT_SPEED",
-    "PLAYER_SHOOT_COOLDOWN"
+
+    # Enums
+    "WeaponType"
 ]
