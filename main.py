@@ -18,6 +18,7 @@ def main():
     sprites.Shot.containers = (shots, updatable, drawable)
 
     player = sprites.Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    score = sprites.Score()
     asteroid_field = sprites.AsteroidField()
 
     while True:
@@ -37,6 +38,7 @@ def main():
                 if a.check_collision(s):
                     a.split()
                     s.kill()
+                    score.increment()
 
         for d in drawable:
             d.draw(screen)
