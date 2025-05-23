@@ -1,4 +1,4 @@
-import pygame, sys, sprites
+import pygame, sys, sprites, text
 from utility import *
 
 
@@ -16,10 +16,11 @@ def main():
     sprites.Asteroid.containers = (asteroids, updatable, drawable)
     sprites.AsteroidField.containers = (updatable)
     sprites.Shot.containers = (shots, updatable, drawable)
-    sprites.Score.containers = (drawable)
+
+    text.Score.containers = (drawable)
 
     player = sprites.Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    score = sprites.Score(screen)
+    score = text.Score(screen)
     asteroid_field = sprites.AsteroidField()
 
     while True:
