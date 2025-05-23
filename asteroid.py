@@ -1,9 +1,9 @@
 import pygame, random
-from circleshape import CircleShape
+import sprites
 from constants import *
 
 
-class Asteroid(CircleShape):
+class Asteroid(sprites.CircleShape):
     def __init__(self, x, y, radius):
         super().__init__(x, y, radius)
 

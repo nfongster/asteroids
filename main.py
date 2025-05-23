@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, sprites
 from constants import *
 from player import Player
 from asteroid import Asteroid
