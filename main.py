@@ -1,9 +1,5 @@
 import pygame, sys, sprites
 from utility import *
-from player import Player
-from asteroid import Asteroid
-from asteroidfield import AsteroidField
-from shot import Shot
 
 
 def main():
@@ -16,13 +12,13 @@ def main():
     asteroids = pygame.sprite.Group()
     shots = pygame.sprite.Group()
 
-    Player.containers = (updatable, drawable)
-    Asteroid.containers = (asteroids, updatable, drawable)
-    AsteroidField.containers = (updatable)
-    Shot.containers = (shots, updatable, drawable)
+    sprites.Player.containers = (updatable, drawable)
+    sprites.Asteroid.containers = (asteroids, updatable, drawable)
+    sprites.AsteroidField.containers = (updatable)
+    sprites.Shot.containers = (shots, updatable, drawable)
 
-    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    asteroid_field = AsteroidField()
+    player = sprites.Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+    asteroid_field = sprites.AsteroidField()
 
     while True:
         for event in pygame.event.get():

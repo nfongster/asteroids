@@ -1,6 +1,5 @@
-import pygame, random
+import pygame, random, sprites
 from utility import *
-from asteroid import Asteroid
 
 
 class AsteroidField(pygame.sprite.Sprite):
@@ -32,7 +31,7 @@ class AsteroidField(pygame.sprite.Sprite):
         self.spawn_timer = 0.0
 
     def spawn(self, radius, position, velocity):
-        asteroid = Asteroid(position.x, position.y, radius)
+        asteroid = sprites.Asteroid(position.x, position.y, radius)
         asteroid.velocity = velocity
 
     def update(self, dt):
