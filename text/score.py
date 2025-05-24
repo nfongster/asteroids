@@ -5,7 +5,7 @@ from utility import *
 class Score(pygame.sprite.Sprite):
     RAPID_SHOT_SCORE = 2
     SPREAD_SHOT_SCORE = 10
-    LASER_SHOT_SCORE = 15
+    LASER_SHOT_SCORE = 100
 
     def __init__(self, screen):
         if hasattr(self, "containers"):
